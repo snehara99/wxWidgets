@@ -117,6 +117,107 @@
             "inherits": "osx_base",
             "displayName": "macOS Make",
             "generator": "Unix Makefiles"
+        },
+        {
+            "name": "appmod-repro",
+            "displayName": "AppMod wxWidgets repro",
+            "description": "Active baseline configuration using MSVC 14.29.",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/cmake/output/appmod-repro-v142-14.29",
+            "architecture": {
+                "value": "x64",
+                "strategy": "external"
+            },
+            "toolset": {
+                "value": "v142,version=14.29.30133,host=x64",
+                "strategy": "external"
+            },
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_SYSTEM_VERSION": "10.0.26100.0",
+                "CMAKE_C_COMPILER": "cl.exe",
+                "CMAKE_CXX_COMPILER": "cl.exe",
+                "CMAKE_CXX_FLAGS": "/EHsc /wd4996 /wd4865 /wd4005",
+                "CMAKE_C_FLAGS": "/wd4005",
+                "wxBUILD_SHARED": "OFF",
+                "wxBUILD_SAMPLES": "OFF",
+                "wxBUILD_TESTS": "OFF",
+                "wxBUILD_DEMOS": "OFF",
+                "wxBUILD_BENCHMARKS": "OFF",
+                "wxBUILD_PRECOMP": "OFF",
+                "wxBUILD_INSTALL": "OFF"
+            },
+            "vendor": {
+                "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                    "hostOS": [
+                        "Windows"
+                    ],
+                    "intelliSenseMode": "windows-msvc-x64"
+                }
+            }
         }
-    ]
+    ],
+    "buildPresets": [
+        {
+            "name": "appmod-repro",
+            "displayName": "Build AppMod wxWidgets repro",
+            "configurePreset": "appmod-repro",
+            "cleanFirst": true,
+            "jobs": 8,
+            "targets": [
+                "libs/propgrid/CMakeFiles/wxpropgrid.dir/__/__/__/__/src/propgrid/advprops.cpp.obj",
+                "libs/core/CMakeFiles/wxcore.dir/__/__/__/__/src/msw/dialog.cpp.obj"
+            ],
+            "environment": {
+                "_CL_": "/we4996 /w14865"
+            },
+            "nativeToolOptions": [
+                "-k",
+                "0"
+            ]
+        }
+    ],
+    "vendor": {
+        "appmod.wxwidgets.repro/1.0": {
+            "comment": "Commented-out baseline preset. Swap this object with the active appmod-repro configure preset to use MSVC 14.29.",
+            "commentedOutConfigurePreset": {
+                "name": "appmod-repro",
+                "displayName": "AppMod wxWidgets repro",
+                "description": "Commented-out baseline configuration using MSVC 14.29.",
+                "generator": "Ninja",
+                "binaryDir": "${sourceDir}/build/cmake/output/appmod-repro-v142-14.29",
+                "architecture": {
+                    "value": "x64",
+                    "strategy": "external"
+                },
+                "toolset": {
+                    "value": "v142,version=14.29.30133,host=x64",
+                    "strategy": "external"
+                },
+                "cacheVariables": {
+                    "CMAKE_BUILD_TYPE": "Release",
+                    "CMAKE_SYSTEM_VERSION": "10.0.26100.0",
+                    "CMAKE_C_COMPILER": "cl.exe",
+                    "CMAKE_CXX_COMPILER": "cl.exe",
+                    "CMAKE_CXX_FLAGS": "/EHsc /wd4996 /wd4865 /wd4005",
+                    "CMAKE_C_FLAGS": "/wd4005",
+                    "wxBUILD_SHARED": "OFF",
+                    "wxBUILD_SAMPLES": "OFF",
+                    "wxBUILD_TESTS": "OFF",
+                    "wxBUILD_DEMOS": "OFF",
+                    "wxBUILD_BENCHMARKS": "OFF",
+                    "wxBUILD_PRECOMP": "OFF",
+                    "wxBUILD_INSTALL": "OFF"
+                },
+                "vendor": {
+                    "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                        "hostOS": [
+                            "Windows"
+                        ],
+                        "intelliSenseMode": "windows-msvc-x64"
+                    }
+                }
+            }
+        }
+    }
 }
