@@ -121,15 +121,15 @@
         {
             "name": "appmod-repro",
             "displayName": "AppMod wxWidgets repro",
-            "description": "Active baseline configuration using MSVC 14.29.",
+            "description": "Active regression configuration using MSVC 14.51.",
             "generator": "Ninja",
-            "binaryDir": "${sourceDir}/build/cmake/output/appmod-repro-v142-14.29",
+            "binaryDir": "${sourceDir}/build/cmake/output/appmod-repro-v145-14.51",
             "architecture": {
                 "value": "x64",
                 "strategy": "external"
             },
             "toolset": {
-                "value": "v142,version=14.29.30133,host=x64",
+                "value": "v145,version=14.51.36231,host=x64",
                 "strategy": "external"
             },
             "cacheVariables": {
