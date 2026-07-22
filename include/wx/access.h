@@ -117,19 +117,19 @@ enum wxAccRole {
 
 // Object types
 
-enum wxAccObject {
-    wxOBJID_WINDOW =    0x00000000,
-    wxOBJID_SYSMENU =   0xFFFFFFFF,
-    wxOBJID_TITLEBAR =  0xFFFFFFFE,
-    wxOBJID_MENU =      0xFFFFFFFD,
-    wxOBJID_CLIENT =    0xFFFFFFFC,
-    wxOBJID_VSCROLL =   0xFFFFFFFB,
-    wxOBJID_HSCROLL =   0xFFFFFFFA,
-    wxOBJID_SIZEGRIP =  0xFFFFFFF9,
-    wxOBJID_CARET =     0xFFFFFFF8,
-    wxOBJID_CURSOR =    0xFFFFFFF7,
-    wxOBJID_ALERT =     0xFFFFFFF6,
-    wxOBJID_SOUND =     0xFFFFFFF5
+enum wxAccObject : int {
+    wxOBJID_WINDOW =    0,
+    wxOBJID_SYSMENU =   -1,
+    wxOBJID_TITLEBAR =  -2,
+    wxOBJID_MENU =      -3,
+    wxOBJID_CLIENT =    -4,
+    wxOBJID_VSCROLL =   -5,
+    wxOBJID_HSCROLL =   -6,
+    wxOBJID_SIZEGRIP =  -7,
+    wxOBJID_CARET =     -8,
+    wxOBJID_CURSOR =    -9,
+    wxOBJID_ALERT =     -10,
+    wxOBJID_SOUND =     -11
 };
 
 // Accessible states

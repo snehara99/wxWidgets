@@ -42,6 +42,9 @@
     // 'symbol' is not defined as a preprocessor macro, replacing with '0' for
     // 'directives'
     #pragma warning(disable:4668)
+
+    // The underlying type of an SDK enumeration will change with /Zc:enumTypes.
+    #pragma warning(disable:4865)
 #endif
 
 // When the application wants to use <winsock2.h> (this is required for IPv6
