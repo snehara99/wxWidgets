@@ -126,55 +126,55 @@ enum wxAccRole {
 /**
     Objects are represented by a wxAccObject enum value.
 */
-enum wxAccObject : int {
+enum wxAccObject {
     /**
         @hideinitializer
     */
-    wxOBJID_WINDOW =    0,
+    wxOBJID_WINDOW =    0x00000000,
     /**
         @hideinitializer
     */
-    wxOBJID_SYSMENU =   -1,
+    wxOBJID_SYSMENU =   0xFFFFFFFF,
     /**
         @hideinitializer
     */
-    wxOBJID_TITLEBAR =  -2,
+    wxOBJID_TITLEBAR =  0xFFFFFFFE,
     /**
         @hideinitializer
     */
-    wxOBJID_MENU =      -3,
+    wxOBJID_MENU =      0xFFFFFFFD,
     /**
         @hideinitializer
     */
-    wxOBJID_CLIENT =    -4,
+    wxOBJID_CLIENT =    0xFFFFFFFC,
     /**
         @hideinitializer
     */
-    wxOBJID_VSCROLL =   -5,
+    wxOBJID_VSCROLL =   0xFFFFFFFB,
     /**
         @hideinitializer
     */
-    wxOBJID_HSCROLL =   -6,
+    wxOBJID_HSCROLL =   0xFFFFFFFA,
     /**
         @hideinitializer
     */
-    wxOBJID_SIZEGRIP =  -7,
+    wxOBJID_SIZEGRIP =  0xFFFFFFF9,
     /**
         @hideinitializer
     */
-    wxOBJID_CARET =     -8,
+    wxOBJID_CARET =     0xFFFFFFF8,
     /**
         @hideinitializer
     */
-    wxOBJID_CURSOR =    -9,
+    wxOBJID_CURSOR =    0xFFFFFFF7,
     /**
         @hideinitializer
     */
-    wxOBJID_ALERT =     -10,
+    wxOBJID_ALERT =     0xFFFFFFF6,
     /**
         @hideinitializer
     */
-    wxOBJID_SOUND =     -11
+    wxOBJID_SOUND =     0xFFFFFFF5
 };
 
 

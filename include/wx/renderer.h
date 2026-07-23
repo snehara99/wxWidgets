@@ -75,7 +75,7 @@ enum
 
     // this is a pseudo flag not used directly by wxRenderer but rather by some
     // controls internally
-    wxCONTROL_DIRTY      = (int)0x80000000
+    wxCONTROL_DIRTY      = 0x80000000
 };
 
 // title bar buttons supported by DrawTitleBarBitmap()
